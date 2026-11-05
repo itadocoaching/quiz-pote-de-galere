@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#5c003d">
+  <meta name="description" content="Découvre quelle émotion prend le plus de place dans ta vie avec le test Itado Coaching.">
+  <title>Quel est ton pote de galère émotionnel ? — Itado Coaching</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a href="/" class="brand" aria-label="Itado Coaching, accueil">
+        <img src="/assets/logo-itado.png" alt="Itado Coaching">
+      </a>
+    </header>
+
+    <main>
+      <section id="welcome" class="screen active">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">LE TEST QUI FAIT DU BIEN À TA CONSCIENCE</p>
+            <h1>Quel est ton <em>pote de galère</em> émotionnel&nbsp;?</h1>
+            <div class="orange-swish"></div>
+            <p class="lead">Colère, peur, tristesse, culpabilité… Découvre quelle émotion prend le plus de place dans ta vie en ce moment et ce qu’elle essaie de te dire.</p>
+            <button id="start-btn" class="btn btn-primary">Faire le test <span>→</span></button>
+            <div class="meta"><span>◷ 5 minutes</span><span>☷ 20 questions</span></div>
+          </div>
+          <div class="hero-art">
+            <img src="/assets/colere.jpg" alt="Illustration BD d'une femme qui exprime sa colère">
+            <span class="sticker sticker-one">?</span><span class="sticker sticker-two">!</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="quiz" class="screen">
+        <div class="quiz-top">
+          <p class="eyebrow">ON APPREND À SE CONNAÎTRE</p>
+          <div class="progress-label"><span id="question-count">Question 1 sur 20</span><span id="progress-percent">5%</span></div>
+          <div class="progress-track"><div id="progress-bar"></div></div>
+        </div>
+        <div class="quiz-card">
+          <div class="question-number" id="question-number">1.</div>
+          <h2 id="question-text"></h2>
+          <p class="helper">À quelle fréquence te reconnais-tu dans cette situation&nbsp;?</p>
+          <div id="answers" class="answers"></div>
+        </div>
+        <div class="quiz-actions">
+          <button id="previous-btn" class="btn btn-outline">← Précédent</button>
+          <button id="next-btn" class="btn btn-primary" disabled>Suivant →</button>
+        </div>
+      </section>
+
+      <section id="lead" class="screen">
+        <div class="form-card">
+          <p class="eyebrow">PLUS QU’UNE PETITE ÉTAPE</p>
+          <h1>Alors, qui squatte ta vie&nbsp;?</h1>
+          <p class="lead">Renseigne tes coordonnées pour découvrir ton profil émotionnel et recevoir tes conseils personnalisés.</p>
+          <form id="lead-form">
+            <label>Prénom <span>*</span><input name="firstName" autocomplete="given-name" required maxlength="80" placeholder="Ton prénom"></label>
+            <label>Nom <span>*</span><input name="lastName" autocomplete="family-name" required maxlength="80" placeholder="Ton nom"></label>
+            <label>Adresse e-mail <span>*</span><input name="email" type="email" autocomplete="email" required maxlength="254" placeholder="toi@exemple.fr"></label>
+            <label class="consent"><input type="checkbox" name="consent" required><span>J’accepte de recevoir les conseils, ressources et actualités d’Itado Coaching par e-mail. Je pourrai me désinscrire à tout moment. <a href="https://itadocoaching.fr" target="_blank" rel="noopener">En savoir plus</a>.</span></label>
+            <p id="form-error" class="form-error" role="alert"></p>
+            <button class="btn btn-primary btn-wide" type="submit" id="submit-lead">Découvrir mon résultat →</button>
+          </form>
+          <p class="privacy-note">Tes informations restent confidentielles et sont utilisées conformément à la politique de confidentialité d’Itado Coaching.</p>
+        </div>
+      </section>
+
+      <section id="results" class="screen">
+        <div class="results-heading">
+          <p class="eyebrow">TON PETIT BILAN ÉMOTIONNEL</p>
+          <h1>Ton profil émotionnel</h1>
+          <p class="lead" id="result-intro"></p>
+        </div>
+        <div id="score-list" class="score-list"></div>
+        <div class="dominant-card">
+          <div class="crown">♛</div>
+          <div>
+            <p class="eyebrow">TON / TES PROFIL(S) DOMINANT(S)</p>
+            <h2 id="dominant-title"></h2>
+            <p id="dominant-copy"></p>
+          </div>
+        </div>
+        <p class="result-disclaimer">Ce test est un outil de réflexion personnelle. Il ne constitue pas un diagnostic psychologique.</p>
+        <div id="profile-cards" class="profile-cards"></div>
+        <div class="closing-card">
+          <h2>Et maintenant&nbsp;?</h2>
+          <p>Tu as quelques clés pour mieux comprendre tes émotions et commencer à en faire des alliées dans ton quotidien.</p>
+          <button id="restart-btn" class="btn btn-primary">Refaire le test ↻</button>
+        </div>
+      </section>
+    </main>
+    <footer>© <span id="year"></span> Itado Coaching · Un pas de plus vers la connaissance de soi.</footer>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
